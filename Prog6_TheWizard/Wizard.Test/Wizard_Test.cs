@@ -131,6 +131,7 @@ namespace Wizard.Test.Uitwerking
          * Onze tovenaar heeft altijd een zwarte pot :*( 
          **/
         [TestMethod]
+        [Ignore]
         public void ArmaKroDilt_Goed(){
                //1. Arrange
             List<string> woorden = new List<string>() { "Arma", "kro", "dilt"};
