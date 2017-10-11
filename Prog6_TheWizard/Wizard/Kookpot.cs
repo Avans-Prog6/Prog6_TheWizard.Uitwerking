@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Wizard
+﻿namespace Wizard
 {
     public class Kookpot
     {
