@@ -2,38 +2,36 @@
 {
     public class Toverstaf : IToverstaf
     {
-        private int _hoeveelheidEnergie;
-
-        public int HoeveelheidEnergie => _hoeveelheidEnergie;
+        public int HoeveelheidEnergie { get; private set; }
 
         public Toverstaf()
         {
-            _hoeveelheidEnergie = 10;
+            HoeveelheidEnergie = 10;
         }
 
         public Toverstaf(int energie)
         {
-            _hoeveelheidEnergie = 100;
+            HoeveelheidEnergie = 100;
         }
 
         public void Links()
         {
-            _hoeveelheidEnergie--;
+            HoeveelheidEnergie--;
         }
 
         public void Rechts()
         {
-            _hoeveelheidEnergie--;
+            HoeveelheidEnergie--;
         }
 
         public void Omhoog()
         {
-            _hoeveelheidEnergie--;
+            HoeveelheidEnergie--;
         }
 
         public void Omlaag()
         {
-            _hoeveelheidEnergie--;
+            HoeveelheidEnergie--;
         }
     }
 }
