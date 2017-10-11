@@ -6,16 +6,16 @@ using Moq;
 namespace Wizard.Test.Uitwerking
 {
     [TestClass]
-    public class Wizard_Test 
+    public class WizardTest 
     {
-        private Wizard.Tovenaar tovenaar;
-        private Wizard.Toverstaf staf;
+        private Wizard.Tovenaar _tovenaar;
+        private Wizard.Toverstaf _staf;
  
         [TestInitialize]
         public void Init()
         {
-            staf = new Toverstaf();
-            tovenaar = new Tovenaar(staf);
+            _staf = new Toverstaf();
+            _tovenaar = new Tovenaar(_staf);
         }
 
         [TestMethod]
@@ -26,7 +26,7 @@ namespace Wizard.Test.Uitwerking
             List<String> ing = new List<String>() { "spinneweb", "oorlel", "slangegif" };
 
             //2. Act
-            String result = tovenaar.Toverspreuk(ing, woorden);
+            String result = _tovenaar.Toverspreuk(ing, woorden);
 
             //3. Assert
             Assert.AreEqual("doe open die poort", result);
@@ -42,7 +42,7 @@ namespace Wizard.Test.Uitwerking
             List<String> ing = new List<String>() { "spinneweb", "oorlel",  };
 
             //2. Act
-            String result = tovenaar.Toverspreuk(ing, woorden);
+            String result = _tovenaar.Toverspreuk(ing, woorden);
 
             //3. Assert
             Assert.AreEqual("doe open die poort", result);
@@ -58,7 +58,7 @@ namespace Wizard.Test.Uitwerking
             List<String> ing = new List<String>() { "spinneweb", "oorlel", "slangegif" };
 
             //2. Act
-            String result = tovenaar.Toverspreuk(ing, woorden);
+            String result = _tovenaar.Toverspreuk(ing, woorden);
 
             //3. Assert
             Assert.AreEqual("doe open die poort", result);
@@ -74,7 +74,7 @@ namespace Wizard.Test.Uitwerking
             List<String> ing = new List<String>() { "spinneweb", "oorlel" };
 
             //2. Act
-            String result = tovenaar.Toverspreuk(ing, woorden);
+            String result = _tovenaar.Toverspreuk(ing, woorden);
 
             //3. Assert
             Assert.AreEqual("Toverspreuk mislukt", result);

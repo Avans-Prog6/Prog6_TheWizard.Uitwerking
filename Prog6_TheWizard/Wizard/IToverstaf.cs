@@ -1,5 +1,4 @@
-﻿using System;
-namespace Wizard
+﻿namespace Wizard
 {
     public interface IToverstaf
     {

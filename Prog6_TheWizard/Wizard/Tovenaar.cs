@@ -1,23 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Wizard
 {
     public class Tovenaar
     {
-        private Kookpot _kookpot { get; set; }
+        private Kookpot Kookpot { get; set; }
 
-        private IToverstaf _staf { get; set; }
+        private IToverstaf Staf { get; set; }
 
 
         public Tovenaar(IToverstaf pStaf)
         {
-            this._kookpot = new Kookpot("zwart");
-            this._staf = pStaf;
-
+            Kookpot = new Kookpot("zwart");
+            Staf = pStaf;
         }
 
 
@@ -29,7 +25,6 @@ namespace Wizard
             }
             else
             {
-
                 if (words.Count == 3)
                 {
                     //Fora mis Forameur
@@ -46,8 +41,8 @@ namespace Wizard
                     {
                         if (ing.Contains("Kikkerbil") && ing.Contains("oorlel") && ing.Contains("rattenstaart") && ing.Contains("slangegif"))
                         {
-                            _staf.Omhoog();
-                            _staf.Omlaag();
+                            Staf.Omhoog();
+                            Staf.Omlaag();
                             return "best friends for life";
                         }
                         else
@@ -57,8 +52,8 @@ namespace Wizard
                     {
                         if (ing.Contains("Kikkerbil") && ing.Contains("oorlel") && ing.Contains("rattenstaart") && ing.Contains("krokodillenoog"))
                         {
-                            _staf.Links();
-                            _staf.Rechts();
+                            Staf.Links();
+                            Staf.Rechts();
                             return "Er was licht, en hij zag dat het goed was!";
                         }
                         else
@@ -69,7 +64,7 @@ namespace Wizard
                         if (ing.Contains("Kikkerbil") && ing.Contains("spinneweb") && ing.Contains("oorlel") &&
                             ing.Contains("rattenstaart") && ing.Contains("slangegif") && ing.Contains("mensenhaar") && ing.Contains("krokodillenoog"))
                         {
-                            if (_kookpot.Kleur == "zilver")
+                            if (Kookpot.Kleur == "zilver")
                             {
                                 return "upgrades";
                             }
@@ -94,11 +89,11 @@ namespace Wizard
                     {
                         if (ing.Contains("Kikkerbil") && ing.Contains("spinneweb") && ing.Contains("mensenhaar") && ing.Contains("krokodillenoog"))
                         {
-                            _staf.Links();
-                            _staf.Omhoog();
-                            _staf.Rechts();
-                            _staf.Omlaag();
-                            return "Je bent genezen met " + _staf.HoeveelheidEnergie + " energiepunten";
+                            Staf.Links();
+                            Staf.Omhoog();
+                            Staf.Rechts();
+                            Staf.Omlaag();
+                            return "Je bent genezen met " + Staf.HoeveelheidEnergie + " energiepunten";
                         }
                         else
                         { throw new VerkeerdeIngredientenException(); }
