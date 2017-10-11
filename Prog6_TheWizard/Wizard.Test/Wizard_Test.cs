@@ -22,11 +22,11 @@ namespace Wizard.Test.Uitwerking
         public void Foramisforameur_goed()
         {
             //1. Arrange
-            List<String> woorden = new List<String>() { "Fora", "mis", "Forameur" };
-            List<String> ing = new List<String>() { "spinneweb", "oorlel", "slangegif" };
+            List<string> woorden = new List<string>() { "Fora", "mis", "Forameur" };
+            List<string> ing = new List<string>() { "spinneweb", "oorlel", "slangegif" };
 
             //2. Act
-            String result = _tovenaar.Toverspreuk(ing, woorden);
+            string result = _tovenaar.Toverspreuk(ing, woorden);
 
             //3. Assert
             Assert.AreEqual("doe open die poort", result);
@@ -38,11 +38,11 @@ namespace Wizard.Test.Uitwerking
         public void Foramisforameur_fout_verkeerdeIngredienten()
         {
             //1. Arrange
-            List<String> woorden = new List<String>() { "Fora", "mis", "Forameur" };
-            List<String> ing = new List<String>() { "spinneweb", "oorlel",  };
+            List<string> woorden = new List<string>() { "Fora", "mis", "Forameur" };
+            List<string> ing = new List<string>() { "spinneweb", "oorlel",  };
 
             //2. Act
-            String result = _tovenaar.Toverspreuk(ing, woorden);
+            string result = _tovenaar.Toverspreuk(ing, woorden);
 
             //3. Assert
             Assert.AreEqual("doe open die poort", result);
@@ -54,11 +54,11 @@ namespace Wizard.Test.Uitwerking
         public void Foramisforameur_fout_verkeerdeWoorden()
         {
             //1. Arrange
-            List<String> woorden = new List<String>() { "Fora", "mis", "Forameut" };
-            List<String> ing = new List<String>() { "spinneweb", "oorlel", "slangegif" };
+            List<string> woorden = new List<string>() { "Fora", "mis", "Forameut" };
+            List<string> ing = new List<string>() { "spinneweb", "oorlel", "slangegif" };
 
             //2. Act
-            String result = _tovenaar.Toverspreuk(ing, woorden);
+            string result = _tovenaar.Toverspreuk(ing, woorden);
 
             //3. Assert
             Assert.AreEqual("doe open die poort", result);
@@ -70,11 +70,11 @@ namespace Wizard.Test.Uitwerking
         public void Foramisforameur_fout()
         {
             //1. Arrange
-            List<String> woorden = new List<String>() { "Fora", "mis", "Forameur" };
-            List<String> ing = new List<String>() { "spinneweb", "oorlel" };
+            List<string> woorden = new List<string>() { "Fora", "mis", "Forameur" };
+            List<string> ing = new List<string>() { "spinneweb", "oorlel" };
 
             //2. Act
-            String result = _tovenaar.Toverspreuk(ing, woorden);
+            string result = _tovenaar.Toverspreuk(ing, woorden);
 
             //3. Assert
             Assert.AreEqual("Toverspreuk mislukt", result);
@@ -84,14 +84,14 @@ namespace Wizard.Test.Uitwerking
         public void FlimFlamFluister_Goed()
         {
             //1. Arrange
-            List<String> woorden = new List<String>() { "Flim", "Flam", "Fluister" };
-            List<String> ing = new List<String>() { "Kikkerbil", "oorlel", "rattenstaart", "krokodillenoog" };
+            List<string> woorden = new List<string>() { "Flim", "Flam", "Fluister" };
+            List<string> ing = new List<string>() { "Kikkerbil", "oorlel", "rattenstaart", "krokodillenoog" };
             
             Mock<IToverstaf> stafMock = new Mock<IToverstaf>();
             Tovenaar t = new Tovenaar(stafMock.Object);
 
             //2. Act
-            String result = t.Toverspreuk(ing, woorden);
+            string result = t.Toverspreuk(ing, woorden);
 
             //3. Assert
             //Controlleer of de tovernaar de juiste bewegingen maakt
@@ -106,13 +106,13 @@ namespace Wizard.Test.Uitwerking
         public void Bandaladik_goed()
         {
             //1. Arrange
-            List<String> woorden = new List<String>() { "Ban", "da", "ladik"};
-            List<String> ing = new List<String>() { "Kikkerbil", "oorlel", "rattenstaart", "slangegif" };
+            List<string> woorden = new List<string>() { "Ban", "da", "ladik"};
+            List<string> ing = new List<string>() { "Kikkerbil", "oorlel", "rattenstaart", "slangegif" };
             Mock<IToverstaf> stafMock = new Mock<IToverstaf>();
             Tovenaar t = new Tovenaar(stafMock.Object);
-            
+
             //2. Act
-            String result = t.Toverspreuk(ing, woorden);
+            string result = t.Toverspreuk(ing, woorden);
 
             //3. Assert
             //Controlleer of de tovernaar de juiste bewegingen maakt
@@ -134,13 +134,13 @@ namespace Wizard.Test.Uitwerking
         [TestMethod]
         public void ArmaKroDilt_Goed(){
                //1. Arrange
-            List<String> woorden = new List<String>() { "Arma", "kro", "dilt"};
-            List<String> ing = new List<String>() { "Kikkerbil", "spinneweb", "oorlel", "rattenstaart", "slangegif", "mensenhaar", "krokodillenoog" };
+            List<string> woorden = new List<string>() { "Arma", "kro", "dilt"};
+            List<string> ing = new List<string>() { "Kikkerbil", "spinneweb", "oorlel", "rattenstaart", "slangegif", "mensenhaar", "krokodillenoog" };
             Mock<IToverstaf> stafMock = new Mock<IToverstaf>();
             Tovenaar t = new Tovenaar(stafMock.Object);
-            
+
             //2. Act
-            String result = t.Toverspreuk(ing, woorden);
+            string result = t.Toverspreuk(ing, woorden);
 
             //3. Assert
             //Controlleer of de tovernaar de juiste bewegingen maakt
@@ -158,13 +158,13 @@ namespace Wizard.Test.Uitwerking
         public void BalSamSalaBond()
         {
             //1. Arrange
-            List<String> woorden = new List<String>() { "Bal", "sam", "sala", "bond" };
-            List<String> ing = new List<String>() { "Kikkerbil", "spinneweb", "mensenhaar", "krokodillenoog" };
+            List<string> woorden = new List<string>() { "Bal", "sam", "sala", "bond" };
+            List<string> ing = new List<string>() { "Kikkerbil", "spinneweb", "mensenhaar", "krokodillenoog" };
             
             Mock<IToverstaf> stafMock = new Mock<IToverstaf>();
             stafMock.Setup(staf => staf.HoeveelheidEnergie).Returns(3);
-            
-            String volgorde = "";
+
+            string volgorde = "";
             stafMock.Setup(staf => staf.Omhoog()).Callback(() => volgorde += "omhoog");
             stafMock.Setup(staf => staf.Omlaag()).Callback(() => volgorde += "omlaag");
             stafMock.Setup(staf => staf.Links()).Callback(() => volgorde += "links");
@@ -173,7 +173,7 @@ namespace Wizard.Test.Uitwerking
             Tovenaar t = new Tovenaar(stafMock.Object);
 
             //2. Act
-            String result = t.Toverspreuk(ing, woorden);
+            string result = t.Toverspreuk(ing, woorden);
 
             //3. Assert
             //Controlleer of de tovernaar de juiste bewegingen maakt
@@ -188,12 +188,12 @@ namespace Wizard.Test.Uitwerking
         public void GeenIngredienten()
         {
             //1. Arrange
-            List<String> woorden = new List<String>() { };
+            List<string> woorden = new List<string>() { };
             Mock<IToverstaf> stafMock = new Mock<IToverstaf>();
             Tovenaar t = new Tovenaar(stafMock.Object);
 
             //2. Act
-            String result = t.Toverspreuk(null, woorden);
+            string result = t.Toverspreuk(null, woorden);
         }
 
         [TestMethod]
@@ -201,13 +201,13 @@ namespace Wizard.Test.Uitwerking
         public void GeenToverspreuk()
         {
             //1. Arrange
-            List<String> woorden = new List<String>() { "Arma"};
-            List<String> ing = new List<String>() { "Kikkerbil"};
+            List<string> woorden = new List<string>() { "Arma"};
+            List<string> ing = new List<string>() { "Kikkerbil"};
             Mock<IToverstaf> stafMock = new Mock<IToverstaf>();
             Tovenaar t = new Tovenaar(stafMock.Object);
 
             //2. Act
-            String result = t.Toverspreuk(ing, woorden);
+            string result = t.Toverspreuk(ing, woorden);
 
             //3. Assert
             //Controlleer of de tovernaar de juiste bewegingen maakt

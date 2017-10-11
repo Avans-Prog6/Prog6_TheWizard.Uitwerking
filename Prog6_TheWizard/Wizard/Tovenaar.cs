@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Wizard
 {
@@ -17,7 +16,7 @@ namespace Wizard
         }
 
 
-        public String Toverspreuk(List<String> ing, List<String> words)
+        public string Toverspreuk(List<string> ing, List<string> words)
         {
             if (ing == null || ing.Count == 0)
             {
@@ -27,7 +26,6 @@ namespace Wizard
             {
                 if (words.Count == 3)
                 {
-                    //Fora mis Forameur
                     if (words[0] == "Fora" && words[1] == "mis" && words[2] == "Forameur")
                     {
                         if (ing.Count == 3 && ing.Contains("spinneweb") && ing.Contains("oorlel") && ing.Contains("slangegif"))
@@ -84,7 +82,6 @@ namespace Wizard
                 }
                 else if (words.Count == 4)
                 {
-                    //Bal Sam Sala Bond
                     if (words[0] == "Bal" && words[1] == "sam" && words[2] == "sala" && words[3] == "bond")
                     {
                         if (ing.Contains("Kikkerbil") && ing.Contains("spinneweb") && ing.Contains("mensenhaar") && ing.Contains("krokodillenoog"))

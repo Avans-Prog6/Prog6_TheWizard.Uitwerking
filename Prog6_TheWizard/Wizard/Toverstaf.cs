@@ -4,10 +4,7 @@
     {
         private int _hoeveelheidEnergie;
 
-        public int HoeveelheidEnergie
-        {
-            get { return _hoeveelheidEnergie; }
-        }
+        public int HoeveelheidEnergie => _hoeveelheidEnergie;
 
         public Toverstaf()
         {

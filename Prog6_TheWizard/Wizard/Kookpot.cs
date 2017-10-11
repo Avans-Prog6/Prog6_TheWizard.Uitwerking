@@ -4,9 +4,9 @@ namespace Wizard
 {
     public class Kookpot
     {
-        public String Kleur { get; set; }
+        public string Kleur { get; set; }
 
-        public Kookpot(String pKleur)
+        public Kookpot(string pKleur)
         {
             Kleur = pKleur;
         }
