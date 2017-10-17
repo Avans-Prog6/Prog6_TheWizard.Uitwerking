@@ -119,11 +119,7 @@ namespace Wizard.Test.Uitwerking
             stafMock.Verify(s => s.Omhoog(), Times.Once);
             stafMock.Verify(s => s.Omlaag(), Times.Once);
             stafMock.Verify(s => s.Links(), Times.Never);
-         
-            
-
         }
-
 
         /**
          * Deze test gaat niet goed! 
